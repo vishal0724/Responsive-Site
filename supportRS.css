@@ -1,0 +1,134 @@
+            *{
+                box-sizing: border-box;
+                color: white;
+                overflow: auto;
+            }
+            body{
+                background: linear-gradient(45deg, blue -20%,aqua);
+                margin: 0;
+                padding: 0;
+            }
+            div.header{
+                background-color: turquoise;
+                padding: 1px;
+                text-align: center;
+                font-family: 'Tangerine', cursive;
+            }
+            .Square{
+                position: absolute;
+                top: 35px;
+                left: 50px;
+                width: 40px;
+                height: 40px;
+                background-color: whitesmoke;
+                border-radius: 3px;
+                animation-name: run-square;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes run-square{
+                0%{
+                    transform: rotate(0deg);
+                }
+                25%{
+                    background: blue;
+                    transform: rotate(45deg);
+                    border-bottom-right-radius: 10px;
+                    top: 15px;
+                }
+                50%{
+                    background: purple;
+                    left: 500px;
+                    transform: rotate(90deg);
+                    border-bottom-right-radius: inherit;
+                    top: 35px;
+                }
+                75%{
+                    background: red;
+                    transform: rotate(-45deg);
+                    border-bottom-right-radius: 7px;
+                }
+            }
+            h2{
+                font-size: 300%;
+            }
+            h4{
+                text-decoration: underline;
+            }
+            div.left{
+                left: auto;
+                width: 23%;
+                margin: 1%;
+                float: left; 
+                box-shadow: 0 0 10px;
+                padding: 10px;
+                font-family: 'El Messiri', sans-serif;
+                font-size: 150%;
+            }
+            a{
+                text-decoration: none;
+                border: none;
+                color: inherit;
+                transition: 0.7s;
+            }
+            a:hover, a:active{
+                color:chartreuse;
+                outline: none;
+                transition: 0.7s;
+            }
+            div.right{
+                width: 70%;
+                margin: 1%;
+                float: left; 
+                padding: 10px;
+                box-shadow: 0 0 10px;
+                list-style-type: none;
+                font-family: 'Merienda', cursive;
+                font-size: 105%;
+                
+            }
+            div.footer{
+                width: 100%;
+                margin-top: 5px;
+                display: table;
+                background-color: aqua;
+                padding: 20px;
+                font-size: 250%;
+                text-align: center;
+                font-family: 'Tangerine', cursive;
+                
+            }
+            .image{
+                float:left;
+                margin-right: 5px;
+                text-align: center;
+                border: 1px solid white;
+                border-radius: 8px;
+            }
+            .image:hover{
+                box-shadow: 0 0 10px rgb(255, 255, 255);
+                z-index: 1;
+            }
+            @media screen and (max-width:830px){
+                div.left, div.right {
+                    width: 100%;
+                }
+                div.left, div.right{
+                    margin-bottom: 25px;
+                }
+                .Square{
+                    animation-duration: 3s;
+                }
+                @keyframes run-square{
+                    25%{
+                        background: blue;
+                    }
+                    50%{
+                        background: purple;
+                        left: 200px;
+                    }
+                    75%{
+                        background: red;
+                    }
+                }
+           }
